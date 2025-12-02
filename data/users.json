@@ -1,0 +1,29 @@
+[
+    {
+        "id": "u_692ed2359c515",
+        "name": "kenneth",
+        "email": "kadjechris1@gmail.com",
+        "password": "$2y$10$Tvjl3hJINTKQMS9KmUC45uh.1sLUvyERRym\/rVtzv38HfDcKLJ72m",
+        "role": "admin",
+        "active": true,
+        "created_at": "2025-12-02 11:49:09"
+    },
+    {
+        "id": "u_692ee5ab27b73",
+        "name": "hhh",
+        "email": "prof@ecole.com",
+        "password": "$2y$10$POKgadr1Ba8rCil3k9JRj.OUHniBiv0HEoN\/DMylTdgaPd7JtHrfm",
+        "role": "ecole",
+        "active": true,
+        "created_at": "2025-12-02 13:12:11"
+    },
+    {
+        "id": "u_692ee69bed477",
+        "name": "la machette ",
+        "email": "entreprise@entreprise.com",
+        "password": "$2y$10$Ia7bXqdLwM8e0sfj508hZeborXu4Ea4Wht7\/uEno0tQFo6z7AbYh2",
+        "role": "entreprise",
+        "active": true,
+        "created_at": "2025-12-02 13:16:12"
+    }
+]
