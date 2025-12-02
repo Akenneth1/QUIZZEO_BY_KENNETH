@@ -19,7 +19,7 @@ class QuizController
 
         if (!$quiz || !$quiz['active']) die("Ce quiz n'est pas disponible.");
 
-        // Sécurité : Faut-il être connecté ? (Oui, selon le cahier des charges)
+        // Sécurité : Faut-il être connecté ? 
         if (!isset($_SESSION['user'])) {
             header('Location: index.php?page=auth&action=login');
             exit;
@@ -48,7 +48,7 @@ class QuizController
         if ($quiz['type'] === 'ecole') {
             foreach ($quiz['questions'] as $k => $quest) {
                 $maxScore += $quest['points'];
-                // Si la réponse de l'utilisateur correspond à la bonne réponse définie par le prof
+                
                 if (isset($answers[$k]) && intval($answers[$k]) === intval($quest['correct'])) {
                     $score += $quest['points'];
                 }

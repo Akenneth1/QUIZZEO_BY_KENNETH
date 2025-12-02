@@ -38,7 +38,7 @@ class AuthController
                 }
                 $_SESSION['user'] = $u;
 
-                // REDIRECTION SELON LE ROLE [Source: 27-31]
+                // REDIRECTION SELON LE ROLE 
                 if ($u['role'] === 'admin') header('Location: index.php?page=admin&action=dashboard');
                 elseif ($u['role'] === 'ecole') header('Location: index.php?page=ecole&action=dashboard');
                 elseif ($u['role'] === 'entreprise') header('Location: index.php?page=entreprise&action=dashboard');
@@ -53,7 +53,7 @@ class AuthController
     // Enregistrement du nouvel utilisateur
     public function store()
     {
-        // Vérif Captcha [Source: 26]
+        
         if (intval($_POST['captcha']) !== intval($_POST['captcha_expected'])) {
             $error = "Captcha incorrect";
             require 'views/auth/register.php';

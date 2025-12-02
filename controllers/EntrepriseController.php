@@ -56,7 +56,7 @@ class EntrepriseController
                     'text' => htmlspecialchars($qtext),
                     'type' => $type,
                     'options' => $options,
-                    'points' => 0, // Pas de points pour l'entreprise
+                    'points' => 0, 
                     'correct' => 0
                 ];
             }
@@ -66,7 +66,7 @@ class EntrepriseController
             'id' => uniqid('q_'),
             'title' => htmlspecialchars($title),
             'author_id' => $_SESSION['user']['id'],
-            'type' => 'entreprise', // Marqueur important
+            'type' => 'entreprise', 
             'status' => 'termine',
             'active' => true,
             'questions' => $questions,
@@ -96,7 +96,10 @@ class EntrepriseController
         $total = count($quizResponses);
 
         $stats = [];
-        // Calcul pour chaque question
+       
+
+
+        //
         foreach ($quiz['questions'] as $k => $quest) {
             $s = ['question' => $quest['text'], 'type' => $quest['type'], 'data' => []];
 

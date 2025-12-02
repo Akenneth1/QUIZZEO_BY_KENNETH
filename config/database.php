@@ -1,5 +1,5 @@
 <?php
-// config/database.php
+
 class JsonDB
 {
     private $dir;

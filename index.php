@@ -34,7 +34,7 @@ if (!file_exists($ctrlFile)) {
 }
 $controller = new $ctrlName();
 if (!$action) {
-    // Default action per controller
+    
     $defaults = [
         'auth' => 'login',
         'admin' => 'dashboard',
@@ -46,7 +46,7 @@ if (!$action) {
     $action = $defaults[$page] ?? 'index';
 }
 
-// Allow unauthenticated for auth pages only
+
 if ($page !== 'auth' && !isset($_SESSION['user'])) {
     header('Location: index.php?page=auth&action=login');
     exit;

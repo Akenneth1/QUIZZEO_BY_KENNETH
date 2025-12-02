@@ -59,10 +59,10 @@ class EcoleController
 
                 $questions[] = [
                     'text' => htmlspecialchars($qtext),
-                    'type' => 'qcm', // Force le type QCM pour les écoles
+                    'type' => 'qcm', 
                     'options' => $options,
                     'points' => intval($_POST['points'][$k] ?? 1),
-                    'correct' => intval($_POST['correct'][$k] ?? 1) - 1 // Convertit "1" en index "0"
+                    'correct' => intval($_POST['correct'][$k] ?? 1) - 1
                 ];
             }
         }
@@ -72,7 +72,7 @@ class EcoleController
             'title' => htmlspecialchars($title),
             'author_id' => $_SESSION['user']['id'],
             'type' => 'ecole',
-            'status' => 'termine', // Statut par défaut
+            'status' => 'termine', 
             'active' => true,
             'questions' => $questions,
             'created_at' => date('Y-m-d H:i:s')
